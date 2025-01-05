@@ -1,3 +1,107 @@
-.heading {
-color: green;
+/* Header styles remain unchanged */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center the items vertically */
+    border: 1px solid black;
+    background-color: #fff3e6; /* Light background color */
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 100px;
+}
+
+.title-container {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.title {
+    font-size: 32px; /* Increase font size */
+    font-weight: 700; /* Bold text */
+    color: #ff6347; /* A vibrant color like tomato */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    letter-spacing: 2px; /* Spacing between letters for modern look */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.title:hover {
+    transform: scale(1.1); /* Slightly enlarge the title on hover */
+    color: #d24d57; /* Darker shade of red when hovered */
+}
+
+.nav-items > ul {
+    display: flex;
+    font-size: 16px;
+    list-style: none;
+}
+
+.nav-items > ul > li {
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Updated Restaurant Card styles */
+.res-card {
+    padding: 15px;
+    margin: 10px;
+    width: 220px;
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 8px; /* Rounded corners for a soft look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+.res-card:hover {
+    cursor: pointer;
+    transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Restaurant Card Text Styling */
+.res-card h3, .res-card h4 {
+    font-family: 'Roboto', sans-serif; /* Modern and clean font */
+    margin: 10px 0; /* Space between text */
+}
+
+.res-card h3 {
+    font-size: 20px; /* Larger font size for the restaurant name */
+    font-weight: 700; /* Bold text for emphasis */
+    color: #333; /* Darker color for the name */
+    text-transform: uppercase; /* Uppercase for a bold look */
+}
+
+.res-card h4 {
+    font-size: 16px; /* Smaller font for other details */
+    font-weight: 400; /* Regular weight for readability */
+    color: #777; /* Lighter color for secondary info */
+    line-height: 1.5; /* Line height for better readability */
+}
+
+/* Enhance restaurant logo */
+.res-logo {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px; /* Rounded corners for the logo */
+    object-fit: cover; /* Ensure the logo fits well */
+    transition: transform 0.3s ease; /* Smooth scale on hover */
+}
+
+.res-logo:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.search {
+    padding: 10px;
+}
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Add gap between cards */
 }
