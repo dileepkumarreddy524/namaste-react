@@ -95,13 +95,276 @@
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
+/* Search box container */
 .search {
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+    width: 100%;
 }
 
+/* Styling the search input */
+.search-box {
+    padding: 12px 20px;
+    font-size: 16px;
+    width: 350px;
+    border-radius: 50px;
+    border: 2px solid #ff6347;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-box:focus {
+    border-color: #d24d57;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Styling the search button */
+.search-btn {
+    padding: 12px 20px;
+    margin-left: 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-btn:hover {
+    background-color: #d24d57;
+    transform: translateY(-2px); /* Slightly raise the button on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.search-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 99, 71, 0.5);
+}
+
+/* Additional styles for filter button */
+.filter-btn {
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* Layout for search container */
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* Login Button Styles */
+.login {
+    padding: 12px 30px;
+    background-color: #4caf50; /* Fresh green color */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.login:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Slightly lift the button */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+}
+
+.login:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.5); /* Green focus ring */
+}
+
+/* Flex container for restaurant cards */
 .res-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px; /* Add gap between cards */
+}
+
+/* Shimmer styles */
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Add gap between cards */
+    padding: 20px;
+}
+
+.shimmer-card {
+    width: 220px;
+    height: 350px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-logo {
+    width: 100%;
+    height: 200px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    animation: shimmer 1.5s infinite linear;
+}
+
+.shimmer-text {
+    width: 100%;
+    height: 20px;
+    margin: 10px 0;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    animation: shimmer 1.5s infinite linear;
+}
+
+/* Create the shimmering animation */
+@keyframes shimmer {
+    0% {
+        background-position: -100%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+.shimmer-logo,
+.shimmer-text {
+    background: linear-gradient(90deg, #e0e0e0 25%, #f2f2f2 50%, #e0e0e0 75%);
+    background-size: 200% 100%;
+}
+
+/* Additional styles for filter button */
+.filter-btn {
+    padding: 12px 25px; /* Adequate padding to make the button more clickable */
+    background-color: #4caf50; /* Fresh green background */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px; /* Rounded corners for modern look */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover/focus */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Hover effect */
+.filter-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift the button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+/* Focus effect */
+.filter-btn:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.5); /* Green outline on focus */
+}
+
+/* Active button (when clicked) */
+.filter-btn:active {
+    transform: translateY(1px); /* Slight depression effect when clicked */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reduced shadow when active */
+}
+
+/* Disabled state (optional) */
+.filter-btn:disabled {
+    background-color: #ccc; /* Gray background for disabled state */
+    cursor: not-allowed; /* Change cursor to indicate the button is disabled */
+    box-shadow: none; /* No shadow when disabled */
+}
+
+/* Error page container */
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    background-color: #f2f2f2; /* Light background color */
+}
+
+/* Error content styling */
+.error-content {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 40px 50px;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Error code styling */
+.error-code {
+    font-size: 50px;
+    font-weight: bold;
+    color: #ff6347; /* Bright red color */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow for effect */
+}
+
+/* Error message styling */
+.error-message {
+    font-size: 20px;
+    color: #333; /* Dark text for readability */
+    margin-bottom: 30px;
+}
+
+/* Button styling */
+.go-home-btn {
+    padding: 15px 25px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #4caf50; /* Green background */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on button */
+.go-home-btn:hover {
+    background-color: #45a049; /* Darker green when hovered */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+/* Focus effect on button */
+.go-home-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.5); /* Green focus outline */
+}
+
+/* Remove the default underline and color from Link */
+.restaurant-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+
+/* Optional: Styling for hover on the link */
+.restaurant-link:hover {
+    color: #ff6347; /* Change color on hover to match your theme */
 }
