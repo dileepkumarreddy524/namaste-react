@@ -368,3 +368,65 @@
 .restaurant-link:hover {
     color: #ff6347; /* Change color on hover to match your theme */
 }
+
+/* User card container */
+.user-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto; /* Center the card horizontally */
+    padding: 20px;
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center; /* Center the text */
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover effect on the user card */
+.user-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Increase shadow depth */
+}
+
+/* Title and text styling inside the card */
+.user-card h2, .user-card h3 {
+    color: #333; /* Dark text color for readability */
+    margin: 15px 0; /* Space between lines */
+    text-transform: capitalize; /* Capitalize the first letter of each word */
+}
+
+/* Make the name (h2) standout */
+.user-card h2 {
+    font-size: 24px; /* Larger font size for name */
+    font-weight: 600; /* Slightly bold for the name */
+    color: #4caf50; /* Green color for the name */
+}
+
+/* Styling for location (h3) */
+.user-card h3 {
+    font-size: 20px; /* Smaller font size for location */
+    color: #555; /* Slightly lighter color for location */
+}
+
+/* Contact info (h4) styling */
+.user-card h4 {
+    font-size: 18px; /* Smaller font size for contact */
+    color: #777; /* Even lighter color for contact */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .user-card {
+        width: 90%; /* Make card slightly smaller for mobile screens */
+        padding: 15px; /* Less padding */
+    }
+
+    .user-card h2 {
+        font-size: 22px; /* Adjust name font size for small screens */
+    }
+
+    .user-card h3, .user-card h4 {
+        font-size: 16px; /* Adjust text size */
+    }
+}
